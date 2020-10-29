@@ -1,6 +1,6 @@
 <img src = '../Images/BMWBanner.jpg' width = 850/>
 
-# Automating the Start of an Automobile Startup: <br>Predicting the Price of a Car Based on its Features 
+# Carbuying Made Easy: <br>Predicting the Price of a Car Based on its Features 
 <b>by Clifton Saul</b>
 
 ## Project Overview & Background
