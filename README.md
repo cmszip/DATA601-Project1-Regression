@@ -1,4 +1,4 @@
-<img src = '../Images/BMWBanner.jpg' width = 850/>
+![Car Banner](https://www.izmostock.com/wp-content/uploads/2018/04/izmostock_MainBanner_05.jpg)
 
 # Carbuying Made Easy: <br>Predicting the Price of a Car Based on its Features 
 <b>by Clifton Saul</b>
