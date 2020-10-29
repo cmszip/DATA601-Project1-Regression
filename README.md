@@ -21,8 +21,8 @@ This topic was chosen from the author's own personal interests in vehicles and o
 
 ## Motivation
 
-Fall is a season of change and transition. But one thing never seems to change: people will talk about the weather. Conversation and jokes abound about the supposed craziness of the weather and temperature changes.
-![Image of Maryland Weather](https://i.pinimg.com/originals/c8/bb/06/c8bb061b99aa996672391f44b9bec5a7.jpg)
+Buying a car can be one of the most stressful experiences in a person's life. There is a ton of information to weigh, salespeople will push and pressure you, and knowing you can easily be taken advantage of can make the experience a painful one.
+![Stressed Out Car](https://www.confused.com/-/media/confused/articles/article-content-images/car-insurance/driving-stress-main.jpg?la=en-gb&hash=FD620795484988910AC1E8C32C671B2AF49C880B)
 
 However, we rarely stop and take a moment to wonder if the weather is actually odd or if it's typical for the given time of year. People should be able to discern if the weather truly is uncommon, and the author wants to provide a useful tool for others to do just that.
 
