@@ -12,7 +12,7 @@ This topic was chosen from the author's own personal interests in vehicles and o
 
 ## Repo Content & Navigation
 
-<b>[Data](https://github.com/cmszip/DATA601-Project1-Regression/tree/main/Data)</b> - Folder containing datasets used in this project.
+* <b>[Data](https://github.com/cmszip/DATA601-Project1-Regression/tree/main/Data)</b> - Folder containing datasets used in this project.
   * <b>[auto_data.csv](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/Data/auto_data.csv)</b> - dataset of 201 automobiles pulled from IBM Cloud. Dataset can also be downloaded from [Kaggle](https://www.kaggle.com/statsakash/used-car-price-prediction).
 * <b>[Images](https://github.com/cmszip/DATA601-Project1-Regression/tree/main/Images)</b> - Folder containing images used in this project.
 * <b>[Notebooks](https://github.com/cmszip/DATA601-Project1-Regression/tree/main/Notebooks)</b> - Folder containing the Jupyter notebook used in this project.
