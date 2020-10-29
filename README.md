@@ -73,8 +73,9 @@ Packages used to retrieve, clean, alter, and analyze the data, as well as build,
 ## Summary
 
 In summary, the resulting multiple linear regression model's equation to determine a car's price is:
-<div align="center"><i><b>price</b> = 0.7246 + (0.4871 * curb-weight) - (0.3230 * aspiration_std) + (0.4062 * fuel-system_mpfi) - (0.3168 * make-quality_Budget)
-+ (1.3541 * make-quality_Premium) - (0.5915 * num-of-cylinders_four)
+
+<i><b>price</b> = 0.7246 + (0.4871 * curb-weight) - (0.3230 * aspiration_std) + (0.4062 * fuel-system_mpfi) - (0.3168 * make-quality_Budget)
++ (1.3541 * make-quality_Premium) - (0.5915 * num-of-cylinders_four)</i>
 
 This model will account for 85.1% of the variance in the data while maintaining a low mean squared error of 0.149 with all variables being statistically significant.
 
