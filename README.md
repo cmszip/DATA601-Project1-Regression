@@ -22,95 +22,74 @@ This topic was chosen from the author's own personal interests in vehicles and o
 ## Motivation
 
 Buying a car can be one of the most stressful experiences in a person's life. There is a ton of information to weigh, salespeople will push and pressure you, and knowing you can easily be taken advantage of can make the experience a painful one.
+
 ![Stressed Out Car](https://www.confused.com/-/media/confused/articles/article-content-images/car-insurance/driving-stress-main.jpg?la=en-gb&hash=FD620795484988910AC1E8C32C671B2AF49C880B)
 
-However, we rarely stop and take a moment to wonder if the weather is actually odd or if it's typical for the given time of year. People should be able to discern if the weather truly is uncommon, and the author wants to provide a useful tool for others to do just that.
+However, part of this problem stems from not having adequate information to objectively discern what is a fair deal. People should be able to determine if a given car is being listed at a fair price, and the author wants to provide a useful tool for people to be able to do that.
 
 ## Goals
 
-Given the above motivation, the primary goal of this project is to determine if Baltimore's forecasted temperatures are in line with historical data. If so, it will explain how the forecasted data falls within historical norms. If not, it will explain how the forecasted temperatures differ from historical norms.
+Given the above motivation, the primary goal of this project is to build a model that will predict the price of a car based on some of its features. It will employ a multiple linear regression model to create an equation for people to use to determine a fair price for a car.
 
-A secondary goal is a more personal one. This author hopes to build experience using an API to effectively retrieve data. This project will use the 8 day forecast provided by OpenWeather API and compare it to the historical temperatures taken from Baltimore's US Weather Station for the same area over those same days.
+A secondary goal is a more personal one. This author hopes to build experience developing, refining, and evaluating a regression model. This model will be built using a dataset of vehicles. Info on this dataset can be found below.
 
 
 ## Data Overview
 
-Data was pulled from two different sources: OpenWeather API and from Carnegie Mellon University's repository of US Weather Station data. 
+Data was pulled from IBM Cloud using Pandas. The code to do this can be found in the second code block of [Notebook 1](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/Notebooks/Notebook%201%20-%20Technical%20Notebook.ipynb). Alternatively, the data can be downloaded manually from [Kaggle](https://www.kaggle.com/statsakash/used-car-price-prediction). This dataset consists of 201 rows of vehicles and their features.
 
-In order to use OpenWeather's API, you must first create an account [at this page](https://openweathermap.org/api) to receive your personal API key. Accounts vary in price and access, but this project uses data that can be gathered from a free account. The specific API the author used was [OpenWeather's One Call API](https://openweathermap.org/api/one-call-api), which pulls forecasted weather data of eight days for a selected latitude and longitude. Because this project is focused on Baltimore's forecast, the values for latitude and longitude were those for Baltimore, MD.
+Below is information on the dataset and the packages used in this project:
 
-An important note: this project can be replicated, but not for the exact same dates, as this project requested data from the API on October 3, 2020 to receive a forecast from October 3, 2020 to October 10, 2020. Instead, if you wish to replicate this project, you can use [OpenWeather's One Call API](https://openweathermap.org/api/one-call-api) to pull forecasting data for the week following when you run the code seen in the notebook. From there, you will need to alter the code used to clean the dataset from Carnegie Mellon University. That dataset is taken from [this csv](https://github.com/cmszip/DATA601-Assignment2/blob/main/Data/USW00093721.csv). The alterations you should make are in the seventh code block of [Notebook 1](https://github.com/cmszip/DATA601-Assignment2/blob/main/Notebooks/Notebook%201%20-%20Weather%20Data%20Acquisition%20%26%20Cleaning.ipynb), specifically within the "Pull and Clean Historical Data" section and beneath "# Remove dates outside forecast range". Modify the month(s) and days you wish to focus on or exclude. Once you've done this, you will be able to replicate this project for the time you wish to examine.
-
-The dataset from Carnegie Mellon University contains data from the US Weather Station in Baltimore. These include daily weather readings from 1871 to 2018. Because the US Weather Station in Baltimore moved in 1950 from downtown Baltimore to Baltimore Washington Thurgood Marshall International Airport (BWI), the author only used data from 1950 and later.
-
-Below is information on each dataset and the packages used in this project:
-
-#### The OpenWeather API 
-The original dataset of the 8 day forecast includes:
-  * 8 rows
-  * 21 columns:
+#### Original Dataset 
+The original dataset [auto_data.csv](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/Data/auto_data.csv) includes:
+  * 201 rows
+  * 29 columns:
     * Column datatypes:
       * float64: 11
-      * int64: 7
-      * object: 3
+      * int64: 8
+      * object: 10
  
- This dataset was altered to include:
-  * 8 rows
-  * 7 columns
+ This dataset was altered via data cleaning and feature engineering to include:
+  * 187 rows
+  * 51 columns
     * Column datatypes:
-      * datetime64: 1
-      * float64: 3
-      * int64: 3
-      
- #### US Weather Station Data
- The original csv file of historical weather data from the Baltimore weather station includes:
-  * 54,421 rows
-  * 5 columns
-    * Column datatypes:
-      * float64: 3
-      * int64: 1
-      * object: 1
-      
- This dataset was altered to include:
-  * 560 rows
-  * 7 columns
-    * Column datatypes:
-      * datetime64: 1
-      * float64: 3
-      * int64: 3
- 
- #### Merged Dataset
- These two datasets were combined and altered to create the following dataset:
-  * 568 rows
-  * 8 columns
-    * Column datatypes:
-      * datetime64: 1
-      * float64: 3
-      * int64: 3
-      * object: 1
+      * float64: 16
+      * uint8: 35
       
 #### Packages
-Packages used to retrieve, clean, alter, and analyze the data included:
- * datetime
- * json
- * matplotlib
- * numpy
- * pandas
- * requests
- * seaborn
+Packages used to retrieve, clean, alter, and analyze the data, as well as build, refine, and evaluate the model included:
+  * matplotlib
+  * numpy
+  * pandas
+  * sklearn
+    * LinearRegression
+    * mean_squared_error
+    * r2_score
+    * RFE
+    * StandardScaler
+    * train_test_split
+  * seaborn
  
 ## Summary
 
-The forecasted temperatures for Baltimore, MD, USA for the week dating from October 3, 2020 to October 10, 2020 are common for the time period historically. The average forecasted high temperature is approximately 1.5 degrees Fahrenheit below the average high from 1950 to 2018. However, the average forecasted low temperature is more than 6 degrees Fahrenheit above the the average low from 1950 to 2018. What is most notable is that the temperature is rather stable, as the difference between the forecasted high and low temperatures is only 63.68% of the average historic difference between high and low temperatures. This means that we can expect less temperature change during the upcoming week than is typical. No heavy coats needed yet. 
+In summary, the resulting multiple linear regression model's equation to determine a car's price is:
+<div align="center"><i><b>price</b> = 0.7246 + (0.4871 * curb-weight) - (0.3230 * aspiration_std) + (0.4062 * fuel-system_mpfi) - (0.3168 * make-quality_Budget)
++ (1.3541 * make-quality_Premium) - (0.5915 * num-of-cylinders_four)
+
+This model will account for 85.1% of the variance in the data while maintaining a low mean squared error of 0.149 with all variables being statistically significant.
+
+A person can therefore make pricing decisions based on this model. If a person is more interested in a budget, midrange, or premium brand, he/she/they can account for this in the model as well. Importantly this allows a person to predict the expected price of a vehicle based on these features, which means he/she/they can determine if it is a good deal on a car or if it is overpriced.  
 
 ## Limitations
-One of the main limitations of this project regards the dataset. It is only 568 rows. This is due mainly to the small window of time we are exploring (an eight day period). Additionally, while the original dataset from Carnegie Mellon University contains data beginning in 1871, we decided to remove all data from before 1950. The reasoning behind this is that the original US Weather Station for Baltimore was located in downtown Baltimore until 1950, when it was moved to its current location at the airport that is now known as BWI. For consistency of data, the decision to shrink the dataset was made. Further exploration to compare the forecast to dates beginning in the 1870s could be done, however.
+One limitation is that a decision was made to impute the median value of the column 'stroke' for four vehicles made by Mazda. It did not seem to effect the model, as 'stroke' was not an included feature in the model's final equation.
+
+However, the main limitations are found in the dataset itself. Although the original dataset is over 200 vehicles, that isn't very large compared to the number of automobile models that are available in the US. Furthermore, there are some very popular US brands that are missing. Ford, Chrysler, Lincoln, Cadillac, and others are not included in the dataset. Having a more robust dataset would likely alter the model in ways that will benefit it, and by extension, the user.
 
 ## Contributors
 
 Clifton Saul
 
-## [License & copyright](https://github.com/cmszip/DATA601-Assignment2/blob/main/LICENSE) 
+## [License & copyright](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/LICENSE) 
 
 © Clifton M Saul Jr.
 
