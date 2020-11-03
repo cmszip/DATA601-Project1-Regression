@@ -16,7 +16,7 @@ This topic was chosen from the author's own personal interests in vehicles and o
   * <b>[auto_data.csv](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/Data/auto_data.csv)</b> - dataset of 201 automobiles pulled from IBM Cloud. Dataset can also be downloaded from [Kaggle](https://www.kaggle.com/statsakash/used-car-price-prediction).
 * <b>[Images](https://github.com/cmszip/DATA601-Project1-Regression/tree/main/Images)</b> - Folder containing images used in this project.
 * <b>[Notebooks](https://github.com/cmszip/DATA601-Project1-Regression/tree/main/Notebooks)</b> - Folder containing the Jupyter notebook used in this project.
-  * <b>[Notebook 1 - Technical Notebook](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/Notebooks/Notebook%201%20-%20Technical%20Notebook.ipynb)</b> - Jupyter notebook where data was pulled, explored, and cleaned, and models were built and evaluated. 
+  * <b>[Notebook 1 - Technical Notebook](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/Notebooks/Notebook%201%20-%20Technical%20Notebook%20-%20Cleaned.ipynb)</b> - Jupyter notebook where data was pulled, explored, and cleaned, and models were built and evaluated. 
 * <b>[License](https://github.com/cmszip/DATA601-Project1-Regression/blob/main/LICENSE)</b> - MIT license and copyright.
 
 ## Motivation
